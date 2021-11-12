@@ -57,7 +57,7 @@ export default function Twitter({ file }) {
             <a href={croppedImageTweet} download className="h-11 w-11 rounded-lg border cursor-pointer hover:bg-gray-200 transition flex justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -103,7 +103,7 @@ export default function Twitter({ file }) {
             <a href={croppedImageCard} download className="h-11 w-11 rounded-lg border cursor-pointer hover:bg-gray-200 transition flex justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

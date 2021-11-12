@@ -6,11 +6,7 @@ export default function MenuMobile({ content, closeMenuMobile }) {
   const { locale, locales, defaultLocale } = useRouter();
 
   function callMe() {
-    if (
-      confirm(`Stai per chiamare l\'assistenza di Pickster.io. Vuo continuare?`)
-    ) {
-      location.href = "tel:3478758148";
-    }
+    location.href = "tel:3478758148";
   }
 
   return (
