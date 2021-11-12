@@ -219,7 +219,7 @@ export default function Home() {
 
         <div className="mb-10 rounded-xl mx-auto flex flex-col justify-center items-center p-10">
           <p className="text-lg lg:text-xl font-semibold text-center"> {content.likePickster} </p>
-          <button onClick={shareOnTwitter} className="mt-5 px-6 py-3 bg-gray-200 rounded-xl font-semibold hover:bg-gray-300 flex items-center transition">
+          <button onClick={shareOnTwitter} className="mt-5 px-6 py-3 bg-gray-200 rounded-xl font-semibold hover:bg-gray-300 flex items-center transition" style={{whiteSpace: 'nowrap'}}>
             {content.twitterButton}
             <img src="/twitter_logo.png" className="h-5 ml-2" alt=""/>
           </button>
