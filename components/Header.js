@@ -38,7 +38,7 @@ const textTranslated = {
   },
 };
 
-export default function Header() {
+export default function Header({ toggleDarkMode }) {
   function callMe() {
     location.href = "tel:3478758148";
   }
@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <>
-    <header className="w-screen border-b flex justify-center px-6 py-3 md:px-10 md:py-6">
+    <header className="w-screen border-b dark:border-gray-600 flex justify-center px-6 py-3 md:px-10 md:py-6">
       <div className="flex justify-between items-center w-full">
         <div className="flex items-center">
           <p className="text-xl font-bold tracking-tight">Pickster.io</p>
@@ -81,6 +81,24 @@ export default function Header() {
           </button>
           <button onClick={callMe} className="button-header hidden md:block">
             {content.header3}
+          </button>
+          {/* Dark mode dextop */}
+          <button onClick={() => {toggleDarkMode()} } className="button-header mr-1 px-2 hidden md:block">
+            <svg id="dark_mode-icon_night" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg id="dark_mode-icon_sun" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+          {/* Dark mode mobile */}
+          <button onClick={() => {toggleDarkMode()} } className="button-header mr-2 h-10 w-10 md:hidden">
+            <svg id="dark_mode-icon_night" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg id="dark_mode-icon_sun" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
           </button>
           {/* Button menu mobile */}
           <div className="relative">

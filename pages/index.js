@@ -109,8 +109,27 @@ export default function Home() {
     setOpenModalResult(false)
   }
 
+  /* Dark mode */
+  const [darkMode, setDarkMode] = useState(false)
+
+  function toggleDarkMode(){
+    setDarkMode(!darkMode)
+
+    const html = document.querySelector("html");
+    darkMode ? html.classList.add("dark") : html.classList.remove("dark");
+
+    if(darkMode){
+      document.querySelector('#dark_mode-icon_night').classList.add('hidden')
+      document.querySelector('#dark_mode-icon_sun').classList.remove('hidden')
+    }
+    else{
+      document.querySelector('#dark_mode-icon_night').classList.remove('hidden')
+      document.querySelector('#dark_mode-icon_sun').classList.add('hidden')
+    }
+  }
+
   return (
-    <div>      
+    <div className="transition dark:text-white dark:bg-gray-900">      
       <Head>
         <title>Pickster.io | Ritaglia le tue foto per postarle sui social media, by Leonardo Citton.</title>
         <meta name="title" content="Pickster.io | Ritaglia le tue foto per postarle sui social media, by Leonardo Citton." />
@@ -139,7 +158,7 @@ export default function Home() {
       {openModalDropImage && <DropImage closeModalDropImage={closeModalDropImage} />} 
       {openModalResult && <ModalResult file={file} closeModalResult={closeModalResult} />}
 
-      <Header />
+      <Header toggleDarkMode={toggleDarkMode} />
 
       <main>
         
@@ -152,36 +171,36 @@ export default function Home() {
             </h1>
             <div className="mt-12">
               <div className="flex items-center">
-                <div className="dimension-ball rounded-full text-3xl font-bold bg-gray-100 border flex items-center justify-center">
+                <div className="dimension-ball rounded-full text-3xl font-bold bg-gray-100 dark:bg-gray-700 border dark:border-gray-700 flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                   </svg>
                 </div>
                 <div className="ml-6">
                   <p className="font-semibold text-lg lg:text-xl"> {content.description1} </p>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1"> {content.sub1} </p>
+                  <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400 mt-1"> {content.sub1} </p>
                 </div>
               </div>
               <div className="flex items-center mt-6">
-                <div className="dimension-ball rounded-full text-3xl font-bold bg-gray-100 border flex items-center justify-center">
+                <div className="dimension-ball rounded-full text-3xl font-bold bg-gray-100 dark:bg-gray-700 border dark:border-gray-700 flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
                   </svg>
                 </div>
                 <div className="ml-6">
                   <p className="font-semibold text-lg lg:text-xl"> {content.description2} </p>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1"> {content.sub2} </p>
+                  <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400 mt-1"> {content.sub2} </p>
                 </div>
               </div>
               <div className="flex items-center mt-6">
-                <div className="dimension-ball rounded-full text-3xl font-bold bg-gray-100 border flex items-center justify-center">
+                <div className="dimension-ball rounded-full text-3xl font-bold bg-gray-100 dark:bg-gray-700 border dark:border-gray-700 flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                 </div>
                 <div className="ml-6">
                   <p className="font-semibold text-lg lg:text-xl"> {content.description3} </p>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1"> {content.sub3} </p>
+                  <p className="text-sm lg:text-base text-gray-500 dark:text-gray-400 mt-1"> {content.sub3} </p>
                 </div>
               </div>
              </div>
@@ -195,7 +214,7 @@ export default function Home() {
                     </svg>
                   </div>
                   {/* Input file */}
-                  <button className="fileContainer mt-8 px-7 py-3 bg-white rounded-xl font-semibold hover:bg-gray-200 flex items-center justify-center transition"> 
+                  <button className="fileContainer mt-8 px-7 py-3 bg-white rounded-xl font-semibold text-black hover:bg-gray-200 flex items-center justify-center transition"> 
                     <input type="file" onChange={ handleFile } />
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
@@ -211,7 +230,7 @@ export default function Home() {
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white w-5 h-5" fill="currentColor" viewBox="0 0 496 512"><title id="svg-inline--pinterest"></title> <path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg>
                   </div>
                 </div>
-                <div className="w-full h-full absolute rounded-3xl transform shadow-lg border-4 border-black border-dashed -rotate-2" style={{zIndex: 1}}></div>
+                <div className="w-full h-full absolute rounded-3xl transform shadow-lg border-4 border-black dark:border-white border-dashed -rotate-2" style={{zIndex: 1}}></div>
               </div>
             </div>
           </div>
@@ -219,7 +238,7 @@ export default function Home() {
 
         <div className="mb-10 rounded-xl mx-auto flex flex-col justify-center items-center p-10">
           <p className="text-lg lg:text-xl font-semibold text-center"> {content.likePickster} </p>
-          <button onClick={shareOnTwitter} className="mt-5 px-6 py-3 bg-gray-200 rounded-xl font-semibold hover:bg-gray-300 flex items-center transition" style={{whiteSpace: 'nowrap'}}>
+          <button onClick={shareOnTwitter} className="mt-5 px-6 py-3 bg-gray-200 dark:bg-white rounded-xl font-semibold text-black dark:hover:bg-gray-300 hover:bg-gray-300 flex items-center transition" style={{whiteSpace: 'nowrap'}}>
             {content.twitterButton}
             <img src="/twitter_logo.png" className="h-5 ml-2" alt=""/>
           </button>

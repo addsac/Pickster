@@ -20,7 +20,7 @@ a {
 }
 
 .button-header {
-  @apply px-3 h-8 text-sm rounded-lg hover:bg-gray-200 transition;
+  @apply px-3 h-8 text-sm rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition;
 }
 
 /* .button-header-primary {
@@ -28,7 +28,7 @@ a {
 } */
 
 .close-modal-button{
-  @apply p-3 rounded-xl bg-gray-200 hover:bg-gray-300 cursor-pointer;
+  @apply p-3 rounded-xl bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 cursor-pointer;
 }
 
 .modal-transition {

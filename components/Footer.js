@@ -37,11 +37,11 @@ export default function Footer() {
   const { content } = textTranslated[locale];
 
   return (
-    <footer className="flex justify-center items-center border-t p-10">
+    <footer className="flex justify-center items-center border-t dark:border-gray-600 p-10">
       <a
         href="https://leonardocitton.com"
         rel="nofollow"
-        className="hover:underline text-sm md:text-lg flex items-center"
+        className="hover:underline text-base md:text-lg flex items-center"
       >
         {content.text1}
         <svg
@@ -58,7 +58,7 @@ export default function Footer() {
         <img
           src="https://www.leonardocitton.com/logo.png"
           alt=""
-          className="mx-2 w-5 h-5"
+          className="mx-2 w-5 h-5 dark:border-gray-200 border-white border"
         />
         <span className="font-bold">Leonardo Citton</span>
       </a>

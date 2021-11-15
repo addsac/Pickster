@@ -32,7 +32,7 @@ export default function Linkedin({ file }) {
           <div>
             <div className="flex justify-between items-center">
               <p className="text-xl font-medium">Post</p>
-              <a href={croppedImagePost} download className="h-11 w-11 rounded-lg border cursor-pointer hover:bg-gray-200 transition flex justify-center items-center">
+              <a href={croppedImagePost} download className="h-11 w-11 rounded-lg border cursor-pointer hover:bg-gray-200 dark:border-gray-500 dark:hover:bg-gray-800 transition flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
