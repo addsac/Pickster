@@ -85,7 +85,7 @@ export default function Home() {
   const { content } = textTranslated[locale];
 
   function shareOnTwitter(){
-    window.open('http://twitter.com/share?text=Pickster is a fantastick tool to crop an image for all your social media!!&url=https://pickster.io')
+    window.open('http://twitter.com/share?text=Pickster is a fantastick tool to crop an image for all your social media!!&url=https://pickster.vercel.app')
   }
 
   /* Handle file */
