@@ -79,11 +79,11 @@ export default function Header({ toggleDarkMode }) {
           <button onClick={() => {window.open('https://buy.stripe.com/eVa6rEgFP55A7DO5kl')}} className="button-header mr-1 hidden md:block">
             {content.header2}
           </button>
-          <button onClick={callMe} className="button-header hidden md:block">
+          <button onClick={callMe} className="button-header mr-1 hidden md:block">
             {content.header3}
           </button>
           {/* Dark mode dextop */}
-          <button onClick={() => {toggleDarkMode()} } className="button-header mr-1 px-2 hidden md:block">
+          <button onClick={() => {toggleDarkMode()} } className="button-header px-2 hidden md:block">
             <svg id="dark_mode-icon_night" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
