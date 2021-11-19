@@ -139,17 +139,17 @@ export default function Home() {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
+        <meta property="og:url" content="pickster.vercel.app" />
         <meta property="og:title" content="Ritaglia le tue foto per postarle sui social media." />
         <meta property="og:description" content="Pickster.io by Leonardo Citton" />
         <meta property="og:image" content="/favicon.png" />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="" />
+        <meta property="twitter:card" content="/pickster_for_twitter.jpg" />
+        <meta property="twitter:url" content="pickster.vercel.app" />
         <meta property="twitter:title" content="Ritaglia le tue foto per postarle sui social media." />
         <meta property="twitter:description" content="Pickster.io by Leonardo Citton" />
-        <meta property="twitter:image" content="/favicon.png" />
+        <meta property="twitter:image" content="//pickster_for_twitter.jpg" />
 
         <meta name="revisit-after" content="30 days" />
         <meta name="author" content="Leonardo Citton" />
